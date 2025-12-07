@@ -3,11 +3,16 @@ package main
 import "fmt"
 
 func main() {
-  var token string
-  fmt.Scan(&token)
+  var n int
+  fmt.Scan(&n)
 
-  for token != "12345abcde" {
-    fmt.Scan(&token)
+  if n == 0 {
+    fmt.Println(0)
+  } else {
+    for n > 0 {
+    digit := n % 10
+      fmt.Println(digit)
+      n = n / 10
+    }  
   }
-    fmt.Println("Selamat Anda berhasil login")
 }
